@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE cryptoTrading SYSTEM "cryptoTrading.dtd">
 <cryptoTrading xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
                xsi:noNamespaceSchemaLocation="cryptoTrading.xsd"
                xmlns="http://www.example.com/crypto">
-    &crypto_name;
-    &coin_type;
-    &market_cap;
-    &price_usd;
-    &volume_24h;
-    &circulating_supply;
-    &trading_pairs;
-    &exchange_name;
+    <cryptoName>Bitcoin</cryptoName>
+    <coinType>BTC</coinType>
+    <marketCap>1000000000</marketCap>
+    <priceUSD>30000</priceUSD>
+    <volume24h>50000000</volume24h>
+    <circulatingSupply>18000000</circulatingSupply>
+    <tradingPairs>BTC/USDT, BTC/EUR</tradingPairs>
+    <exchangeName>Binance</exchangeName>
 </cryptoTrading>
