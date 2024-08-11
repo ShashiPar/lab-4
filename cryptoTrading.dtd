@@ -1,0 +1,18 @@
+<!ELEMENT cryptoTrading (cryptoName, coinType, marketCap, priceUSD, volume24h, circulatingSupply, tradingPairs, exchangeName)>
+<!ELEMENT cryptoName (#PCDATA)>
+<!ELEMENT coinType (#PCDATA)>
+<!ELEMENT marketCap (#PCDATA)>
+<!ELEMENT priceUSD (#PCDATA)>
+<!ELEMENT volume24h (#PCDATA)>
+<!ELEMENT circulatingSupply (#PCDATA)>
+<!ELEMENT tradingPairs (#PCDATA)>
+<!ELEMENT exchangeName (#PCDATA)>
+
+<!ENTITY crypto_name "<cryptoName>Bitcoin</cryptoName>">
+<!ENTITY coin_type "<coinType>BTC</coinType>">
+<!ENTITY market_cap "<marketCap>1000000000</marketCap>">
+<!ENTITY price_usd "<priceUSD>30000</priceUSD>">
+<!ENTITY volume_24h "<volume24h>50000000</volume24h>">
+<!ENTITY circulating_supply "<circulatingSupply>18000000</circulatingSupply>">
+<!ENTITY trading_pairs "<tradingPairs>BTC/USDT, BTC/EUR</tradingPairs>">
+<!ENTITY exchange_name "<exchangeName>Binance</exchangeName>">

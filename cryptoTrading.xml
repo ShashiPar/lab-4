@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cryptoTrading SYSTEM "cryptoTrading.dtd">
+<cryptoTrading xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+               xsi:noNamespaceSchemaLocation="cryptoTrading.xsd"
+               xmlns="http://www.example.com/crypto">
+    &crypto_name;
+    &coin_type;
+    &market_cap;
+    &price_usd;
+    &volume_24h;
+    &circulating_supply;
+    &trading_pairs;
+    &exchange_name;
+</cryptoTrading>
