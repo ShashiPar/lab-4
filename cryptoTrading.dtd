@@ -1,3 +1,4 @@
+<!ELEMENT cryptocurrencies (cryptoTrading+)>
 <!ELEMENT cryptoTrading (cryptoName, coinType, marketCap, priceUSD, volume24h, circulatingSupply, tradingPairs, exchangeName)>
 <!ELEMENT cryptoName (#PCDATA)>
 <!ELEMENT coinType (#PCDATA)>
@@ -8,11 +9,75 @@
 <!ELEMENT tradingPairs (#PCDATA)>
 <!ELEMENT exchangeName (#PCDATA)>
 
-<!ENTITY crypto_name "<cryptoName>Bitcoin</cryptoName>">
-<!ENTITY coin_type "<coinType>BTC</coinType>">
-<!ENTITY market_cap "<marketCap>1000000000</marketCap>">
-<!ENTITY price_usd "<priceUSD>30000</priceUSD>">
-<!ENTITY volume_24h "<volume24h>50000000</volume24h>">
-<!ENTITY circulating_supply "<circulatingSupply>18000000</circulatingSupply>">
-<!ENTITY trading_pairs "<tradingPairs>BTC/USDT, BTC/EUR</tradingPairs>">
-<!ENTITY exchange_name "<exchangeName>Binance</exchangeName>">
+
+<!ENTITY crypto_name_1 "<cryptoName>Bitcoin</cryptoName>">
+<!ENTITY coin_type_1 "<coinType>BTC</coinType>">
+<!ENTITY market_cap_1 "<marketCap>1000000000</marketCap>">
+<!ENTITY price_usd_1 "<priceUSD>30000</priceUSD>">
+<!ENTITY volume_24h_1 "<volume24h>50000000</volume24h>">
+<!ENTITY circulating_supply_1 "<circulatingSupply>18000000</circulatingSupply>">
+<!ENTITY trading_pairs_1 "<tradingPairs>BTC/USDT, BTC/EUR</tradingPairs>">
+<!ENTITY exchange_name_1 "<exchangeName>Binance</exchangeName>">
+
+<!ENTITY crypto_name_2 "<cryptoName>Ethereum</cryptoName>">
+<!ENTITY coin_type_2 "<coinType>ETH</coinType>">
+<!ENTITY market_cap_2 "<marketCap>500000000</marketCap>">
+<!ENTITY price_usd_2 "<priceUSD>2000</priceUSD>">
+<!ENTITY volume_24h_2 "<volume24h>20000000</volume24h>">
+<!ENTITY circulating_supply_2 "<circulatingSupply>120000000</circulatingSupply>">
+<!ENTITY trading_pairs_2 "<tradingPairs>ETH/USDT, ETH/EUR</tradingPairs>">
+<!ENTITY exchange_name_2 "<exchangeName>Coinbase</exchangeName>">
+
+<!ENTITY crypto_name_3 "<cryptoName>Ripple</cryptoName>">
+<!ENTITY coin_type_3 "<coinType>XRP</coinType>">
+<!ENTITY market_cap_3 "<marketCap>80000000</marketCap>">
+<!ENTITY price_usd_3 "<priceUSD>0.6</priceUSD>">
+<!ENTITY volume_24h_3 "<volume24h>10000000</volume24h>">
+<!ENTITY circulating_supply_3 "<circulatingSupply>45000000000</circulatingSupply>">
+<!ENTITY trading_pairs_3 "<tradingPairs>XRP/USDT, XRP/EUR</tradingPairs>">
+<!ENTITY exchange_name_3 "<exchangeName>Kraken</exchangeName>">
+
+<!ENTITY crypto_name_4 "<cryptoName>Litecoin</cryptoName>">
+<!ENTITY coin_type_4 "<coinType>LTC</coinType>">
+<!ENTITY market_cap_4 "<marketCap>150000000</marketCap>">
+<!ENTITY price_usd_4 "<priceUSD>150</priceUSD>">
+<!ENTITY volume_24h_4 "<volume24h>5000000</volume24h>">
+<!ENTITY circulating_supply_4 "<circulatingSupply>70000000</circulatingSupply>">
+<!ENTITY trading_pairs_4 "<tradingPairs>LTC/USDT, LTC/EUR</tradingPairs>">
+<!ENTITY exchange_name_4 "<exchangeName>Binance</exchangeName>">
+
+<!ENTITY crypto_name_5 "<cryptoName>Cardano</cryptoName>">
+<!ENTITY coin_type_5 "<coinType>ADA</coinType>">
+<!ENTITY market_cap_5 "<marketCap>60000000</marketCap>">
+<!ENTITY price_usd_5 "<priceUSD>0.8</priceUSD>">
+<!ENTITY volume_24h_5 "<volume24h>2000000</volume24h>">
+<!ENTITY circulating_supply_5 "<circulatingSupply>32000000000</circulatingSupply>">
+<!ENTITY trading_pairs_5 "<tradingPairs>ADA/USDT, ADA/EUR</tradingPairs>">
+<!ENTITY exchange_name_5 "<exchangeName>Binance</exchangeName>">
+
+<!ENTITY crypto_name_6 "<cryptoName>Polkadot</cryptoName>">
+<!ENTITY coin_type_6 "<coinType>DOT</coinType>">
+<!ENTITY market_cap_6 "<marketCap>70000000</marketCap>">
+<!ENTITY price_usd_6 "<priceUSD>10</priceUSD>">
+<!ENTITY volume_24h_6 "<volume24h>3000000</volume24h>">
+<!ENTITY circulating_supply_6 "<circulatingSupply>1100000000</circulatingSupply>">
+<!ENTITY trading_pairs_6 "<tradingPairs>DOT/USDT, DOT/EUR</tradingPairs>">
+<!ENTITY exchange_name_6 "<exchangeName>Coinbase</exchangeName>">
+
+<!ENTITY crypto_name_7 "<cryptoName>Chainlink</cryptoName>">
+<!ENTITY coin_type_7 "<coinType>LINK</coinType>">
+<!ENTITY market_cap_7 "<marketCap>40000000</marketCap>">
+<!ENTITY price_usd_7 "<priceUSD>20</priceUSD>">
+<!ENTITY volume_24h_7 "<volume24h>1500000</volume24h>">
+<!ENTITY circulating_supply_7 "<circulatingSupply>450000000</circulatingSupply>">
+<!ENTITY trading_pairs_7 "<tradingPairs>LINK/USDT, LINK/EUR</tradingPairs>">
+<!ENTITY exchange_name_7 "<exchangeName>Kraken</exchangeName>">
+
+<!ENTITY crypto_name_8 "<cryptoName>Stellar</cryptoName>">
+<!ENTITY coin_type_8 "<coinType>XLM</coinType>">
+<!ENTITY market_cap_8 "<marketCap>50000000</marketCap>">
+<!ENTITY price_usd_8 "<priceUSD>0.5</priceUSD>">
+<!ENTITY volume_24h_8 "<volume24h>1000000</volume24h>">
+<!ENTITY circulating_supply_8 "<circulatingSupply>22000000000</circulatingSupply>">
+<!ENTITY trading_pairs_8 "<tradingPairs>XLM/USDT, XLM/EUR</tradingPairs>">
+<!ENTITY exchange_name_8 "<exchangeName>Binance</exchangeName>">

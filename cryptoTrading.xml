@@ -1,13 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cryptoTrading xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-               xsi:noNamespaceSchemaLocation="cryptoTrading.xsd"
-               xmlns="http://www.example.com/crypto">
-    <cryptoName>Bitcoin</cryptoName>
-    <coinType>BTC</coinType>
-    <marketCap>1000000000</marketCap>
-    <priceUSD>30000</priceUSD>
-    <volume24h>50000000</volume24h>
-    <circulatingSupply>18000000</circulatingSupply>
-    <tradingPairs>BTC/USDT, BTC/EUR</tradingPairs>
-    <exchangeName>Binance</exchangeName>
-</cryptoTrading>
+<?xml-model href="cryptoTrading.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-stylesheet href="cryptoTrading.xsl" type="text/xsl"?>
+
+<!-- <cryptoTrading xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                   xsi:noNamespaceSchemaLocation="cryptoTrading.xsd"
+                   xmlns="http://www.example.com/crypto"> -->
+<!-- <cryptoTrading > -->
+<root xmlns="http://www.example.com/crypto">    
+<cryptoTrading>
+        <cryptoName>Bitcoin</cryptoName>
+        <coinType>BTC</coinType>
+        <marketCap>1000000000</marketCap>
+        <priceUSD>30000</priceUSD>
+        <volume24h>50000000</volume24h>
+        <circulatingSupply>18000000</circulatingSupply>
+        <tradingPairs>BTC/USDT, BTC/EUR</tradingPairs>
+        <exchangeName>Binance</exchangeName>
+    </cryptoTrading>
+
+    <cryptoTrading>
+        <cryptoName>Ethereum</cryptoName>
+        <coinType>ETH</coinType>
+        <marketCap>500000000</marketCap>
+        <priceUSD>2000</priceUSD>
+        <volume24h>20000000</volume24h>
+        <circulatingSupply>120000000</circulatingSupply>
+        <tradingPairs>ETH/USDT, ETH/EUR</tradingPairs>
+        <exchangeName>Coinbase</exchangeName>
+    </cryptoTrading>
+
+    <cryptoTrading>
+        <cryptoName>Ripple</cryptoName>
+        <coinType>XRP</coinType>
+        <marketCap>80000000</marketCap>
+        <priceUSD>0.6</priceUSD>
+        <volume24h>10000000</volume24h>
+        <circulatingSupply>45000000000</circulatingSupply>
+        <tradingPairs>XRP/USDT, XRP/EUR</tradingPairs>
+        <exchangeName>Kraken</exchangeName>
+    </cryptoTrading>
+
+    <cryptoTrading>
+        <cryptoName>Litecoin</cryptoName>
+        <coinType>LTC</coinType>
+        <marketCap>150000000</marketCap>
+        <priceUSD>150</priceUSD>
+        <volume24h>5000000</volume24h>
+        <circulatingSupply>70000000</circulatingSupply>
+        <tradingPairs>LTC/USDT, LTC/EUR</tradingPairs>
+        <exchangeName>Binance</exchangeName>
+    </cryptoTrading>
+
+    <cryptoTrading>
+        <cryptoName>Cardano</cryptoName>
+        <coinType>ADA</coinType>
+        <marketCap>60000000</marketCap>
+        <priceUSD>0.8</priceUSD>
+        <volume24h>2000000</volume24h>
+        <circulatingSupply>32000000000</circulatingSupply>
+        <tradingPairs>ADA/USDT, ADA/EUR</tradingPairs>
+        <exchangeName>Binance</exchangeName>
+    </cryptoTrading>
+
+    <cryptoTrading>
+        <cryptoName>Polkadot</cryptoName>
+        <coinType>DOT</coinType>
+        <marketCap>70000000</marketCap>
+        <priceUSD>10</priceUSD>
+        <volume24h>3000000</volume24h>
+        <circulatingSupply>1100000000</circulatingSupply>
+        <tradingPairs>DOT/USDT, DOT/EUR</tradingPairs>
+        <exchangeName>Coinbase</exchangeName>
+    </cryptoTrading>
+
+    <cryptoTrading>
+        <cryptoName>Chainlink</cryptoName>
+        <coinType>LINK</coinType>
+        <marketCap>40000000</marketCap>
+        <priceUSD>20</priceUSD>
+        <volume24h>1500000</volume24h>
+        <circulatingSupply>450000000</circulatingSupply>
+        <tradingPairs>LINK/USDT, LINK/EUR</tradingPairs>
+        <exchangeName>Kraken</exchangeName>
+    </cryptoTrading>
+
+    <cryptoTrading>
+        <cryptoName>Stellar</cryptoName>
+        <coinType>XLM</coinType>
+        <marketCap>50000000</marketCap>
+        <priceUSD>0.5</priceUSD>
+        <volume24h>1000000</volume24h>
+        <circulatingSupply>22000000000</circulatingSupply>
+        <tradingPairs>XLM/USDT, XLM/EUR</tradingPairs>
+        <exchangeName>Binance</exchangeName>
+    </cryptoTrading>
+
+    <cryptoTrading>
+        <cryptoName>Uniswap</cryptoName>
+        <coinType>UNI</coinType>
+        <marketCap>40000000</marketCap>
+        <priceUSD>25</priceUSD>
+        <volume24h>3000000</volume24h>
+        <circulatingSupply>150000000</circulatingSupply>
+        <tradingPairs>UNI/USDT, UNI/EUR</tradingPairs>
+        <exchangeName>Binance</exchangeName>
+    </cryptoTrading>
+</root>

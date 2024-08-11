@@ -1,34 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-           xmlns="http://www.example.com/crypto" 
            targetNamespace="http://www.example.com/crypto" 
+           xmlns="http://www.example.com/crypto" 
            elementFormDefault="qualified">
 
-    <xs:element name="cryptoTrading">
+    <xs:element name="root">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="cryptoName" type="xs:string"/>
-                <xs:element name="coinType" type="xs:string"/>
-                <xs:element name="marketCap" type="xs:decimal"/>
-                <xs:element name="priceUSD">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:decimal">
-                            <xs:minInclusive value="1000"/>
-                            <xs:maxInclusive value="100000"/>
-                        </xs:restriction>
-                    </xs:simpleType>
+                <xs:element name="cryptoTrading" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cryptoName" type="xs:string"/>
+                            <xs:element name="coinType" type="xs:string"/>
+                            <xs:element name="marketCap" type="xs:decimal"/>
+                            <xs:element name="priceUSD" type="xs:decimal"/>
+                            <xs:element name="volume24h" type="xs:decimal"/>
+                            <xs:element name="circulatingSupply" type="xs:decimal"/>
+                            <xs:element name="tradingPairs" type="xs:string"/>
+                            <xs:element name="exchangeName" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
                 </xs:element>
-                <xs:element name="volume24h" type="xs:decimal"/>
-                <xs:element name="circulatingSupply">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:decimal">
-                            <xs:minInclusive value="1000000"/>
-                            <xs:maxInclusive value="21000000"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name="tradingPairs" type="xs:string"/>
-                <xs:element name="exchangeName" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
