@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Route from Bangalore to Mumbai</title>
+    <style>
+      #map {
+        height: 500px; /* Set the height of the map */
+        width: 100%; /* Set the width of the map */
+      }
+      #info {
+        margin-top: 20px; /* Add some space above the info */
+      }
+    </style>
+    <script>
+      function initMap() {
+        var start = { lat: 12.9716, lng: 77.5946 }; // Bangalore, India
+        var end = { lat: 19.076, lng: 72.8777 }; // Mumbai, India
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 5,
+          center: start,
+        });
+
+        var directionsService = new google.maps.DirectionsService();
+        var directionsRenderer = new google.maps.DirectionsRenderer();
+        directionsRenderer.setMap(map);
+
+        var request = {
+          origin: start,
+          destination: end,
+          travelMode: "DRIVING",
+        };
+
+        // Call the server to get directions
+        fetch(
+          `/directions?origin=${start.lat},${start.lng}&destination=${end.lat},${end.lng}`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.status === "OK" && data.routes.length > 0) {
+              // Format the directions data
+              var directionsData = {
+                routes: data.routes,
+                status: data.status,
+              };
+              directionsRenderer.setDirections(directionsData);
+
+              // Extract and display ETA and distance
+              var route = data.routes[0].legs[0];
+              var eta = route.duration.text;
+              var distance = route.distance.text;
+
+              document.getElementById("info").innerHTML = `
+              <p><strong>Estimated Time:</strong> ${eta}</p>
+              <p><strong>Total Distance:</strong> ${distance}</p>
+            `;
+            } else {
+              console.error("Directions request failed or no routes found.");
+              console.error("Response:", data);
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching directions:", error);
+          });
+      }
+
+      // Load the Google Maps script
+      function loadGoogleMapsScript(apiKey) {
+        var script = document.createElement("script");
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+        script.async = true;
+        document.head.appendChild(script);
+      }
+
+      window.onload = function () {
+        fetch("/apikey")
+          .then((response) => response.json())
+          .then((data) => {
+            var apiKey = data.apiKey;
+            loadGoogleMapsScript(apiKey);
+          })
+          .catch((error) => {
+            console.error("Error fetching API key:", error);
+          });
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Route from Bangalore to Mumbai</h1>
+    <div id="map"></div>
+    <div id="info"></div>
+    <!-- Field for ETA and distance information -->
+  </body>
+</html>
